@@ -1,14 +1,13 @@
 import { SafeAreaView, StyleSheet, Text } from "react-native";
 
-import { Home } from "./src/screens";
+import { Navigation } from "./src/navigation";
 import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
-      <Home />
+      <Navigation />
     </SafeAreaView>
   );
 }
@@ -19,5 +18,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    paddingTop: 10,
   },
 });

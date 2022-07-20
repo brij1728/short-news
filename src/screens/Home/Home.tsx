@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { Text, View } from "react-native";
 
+import { NewsCard } from "../../components";
 import { SearchResults } from "../../api/types";
 import { searchNewsByKeyword } from "../../api/client";
 
@@ -12,5 +13,12 @@ export const Home = () => {
       keyword: "narendra modi",
     }).then((x) => setData(x));
   }, []);
-  return <View>{data && <Text>{JSON.stringify(data, null, 2)}</Text>}</View>;
+  return (
+    <View>
+      {/* {data && <Text>{JSON.stringify(data, null, 2)}</Text>} */}
+      {data?.articles && (
+        <NewsCard articles={data?.articles} searchKeyword={""} />
+      )}
+    </View>
+  );
 };
