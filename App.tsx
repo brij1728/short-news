@@ -1,5 +1,6 @@
 import { SafeAreaView, StyleSheet, Text } from "react-native";
 
+import Constants from "expo-constants";
 import { Navigation } from "./src/navigation";
 import { StatusBar } from "expo-status-bar";
 
@@ -18,6 +19,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: 10,
+    paddingTop: Constants.statusBarHeight,
   },
 });

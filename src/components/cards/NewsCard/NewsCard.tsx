@@ -1,52 +1,36 @@
 import * as React from "react";
 
-import {
-  Image,
-  Linking,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { Image, Linking, Text, View } from "react-native";
 
-import { Article } from "../../../api/types";
-import { Card } from "@rneui/themed";
+import { Card } from "@rneui/base";
 
 type CardDetails = {
-  articles: Article[];
   searchKeyword?: string;
+  media: string;
+  link: string;
+  id: string;
+  summary: string;
 };
 
-export const NewsCard = ({ articles, searchKeyword }: CardDetails) => {
-  return (
-    <ScrollView>
-      {articles.map((article) => {
-        return (
-          <View key={article._id}>
-            <Card>
-              {/* <Card.Title>{searchKeyword}</Card.Title> */}
+export const NewsCard = ({
+  id,
 
-              <Image
-                source={{ uri: article.media }}
-                style={{ width: 350, height: 400, padding: 5 }}
-              />
-              <Text> {article.summary}</Text>
-              <Text
-                style={{ color: "blue" }}
-                onPress={() => Linking.openURL(article.link)}
-              >
-                Click here for source article
-              </Text>
-            </Card>
-          </View>
-        );
-      })}
-    </ScrollView>
+  summary,
+  media,
+  link,
+}: CardDetails) => {
+  return (
+    <View>
+      <Card key={id}>
+        <Image
+          source={{ uri: media }}
+          style={{ width: 350, height: 400, padding: 5 }}
+        />
+        <Text> {summary}</Text>
+        <Text style={{ color: "blue" }} onPress={() => Linking.openURL(link)}>
+          Click here for source article
+        </Text>
+      </Card>
+    </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    height: 50,
-  },
-});
