@@ -1,0 +1,12 @@
+{
+  "singleQuote": true,
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrder": [
+    "^(react|react-native|react-router-dom|react-router)(/.*)?$",
+    "^expo-(.*)?$",
+    "<THIRD_PARTY_MODULES>",
+    "^[./]"
+  ]
+}
