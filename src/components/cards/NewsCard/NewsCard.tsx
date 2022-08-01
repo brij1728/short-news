@@ -20,17 +20,15 @@ export const NewsCard = ({
   link,
 }: CardDetails) => {
   return (
-    <View>
-      <Card key={id}>
-        <Image
-          source={{ uri: media }}
-          style={{ width: 350, height: 400, padding: 5 }}
-        />
-        <Text> {summary}</Text>
-        <Text style={{ color: "blue" }} onPress={() => Linking.openURL(link)}>
-          Click here for source article
-        </Text>
-      </Card>
-    </View>
+    <Card key={id}>
+      <Image
+        source={{ uri: media }}
+        style={{ width: 350, height: 400, padding: 5 }}
+      />
+      <Text> {summary}</Text>
+      <Text style={{ color: "blue" }} onPress={() => Linking.openURL(link)}>
+        Click here for source article
+      </Text>
+    </Card>
   );
 };

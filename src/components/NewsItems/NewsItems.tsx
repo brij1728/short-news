@@ -18,6 +18,7 @@ export const NewsItems = ({ articles }: NewsType) => {
             link={article.link}
             id={article._id}
             summary={article.summary}
+            key={article._id}
           />
         );
       })}
