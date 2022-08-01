@@ -13,7 +13,7 @@ export const Home = () => {
   const [search, setSearch] = React.useState("india");
   React.useEffect(() => {
     searchNewsByKeyword({
-      keyword: "narendra modi",
+      keyword: "भारत",
     })
       .then((x) => setData(x))
       .finally(() => setLoading(false));

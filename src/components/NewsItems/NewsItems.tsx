@@ -14,6 +14,7 @@ export const NewsItems = ({ articles }: NewsType) => {
       {articles.map((article) => {
         return (
           <NewsCard
+            key={article._id}
             media={article.media}
             link={article.link}
             id={article._id}

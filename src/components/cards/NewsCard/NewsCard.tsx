@@ -12,20 +12,11 @@ type CardDetails = {
   summary: string;
 };
 
-export const NewsCard = ({
-  id,
-
-  summary,
-  media,
-  link,
-}: CardDetails) => {
+export const NewsCard = ({ id, summary, media, link }: CardDetails) => {
   return (
     <View>
-      <Card key={id}>
-        <Image
-          source={{ uri: media }}
-          style={{ width: 350, height: 400, padding: 5 }}
-        />
+      <Card>
+        <Image source={{ uri: media }} style={{ width: "100%", height: 400 }} />
         <Text> {summary}</Text>
         <Text style={{ color: "blue" }} onPress={() => Linking.openURL(link)}>
           Click here for source article
