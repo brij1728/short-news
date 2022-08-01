@@ -1,8 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
+import { StyleSheet, View } from 'react-native';
 
-import { StyleSheet, View } from "react-native";
-
-import { SearchBar } from "@rneui/themed";
+import { SearchBar } from '@rneui/themed';
 
 interface ISearchProps {
   searchKeyword: string;

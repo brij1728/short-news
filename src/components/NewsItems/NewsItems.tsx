@@ -1,8 +1,8 @@
-import { ScrollView, StyleSheet } from "react-native";
+import React from 'react';
+import { ScrollView, StyleSheet } from 'react-native';
 
-import { Article } from "../../api/types";
-import { NewsCard } from "../cards";
-import React from "react";
+import { Article } from '../../api/types';
+import { NewsCard } from '../cards';
 
 type NewsType = {
   articles: Article[];
