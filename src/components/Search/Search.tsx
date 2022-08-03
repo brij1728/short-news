@@ -1,8 +1,7 @@
 import * as React from 'react';
-
 import { StyleSheet, View } from 'react-native';
 
-import { SearchBar } from '@rneui/themed';
+import { Searchbar } from 'react-native-paper';
 
 interface ISearchProps {
   searchKeyword: string;
@@ -10,15 +9,18 @@ interface ISearchProps {
 }
 
 export const Search = ({ searchKeyword, setSearch }: ISearchProps) => {
-  const updateSearch = (search: string) => {
-    setSearch(search);
+  const updateSearch = (newValue: string) => {
+    setSearch(newValue);
   };
   return (
     <View style={styles.container}>
-      <SearchBar
+      <Searchbar
+        autoComplete="off"
+        autoCapitalize="none"
+        autoCorrect={false}
         placeholder="Type here..."
-        value={searchKeyword}
         onChangeText={updateSearch}
+        value={searchKeyword}
       />
     </View>
   );
@@ -37,6 +39,5 @@ const styles = StyleSheet.create({
     height: '100%',
     paddingLeft: 8,
     fontSize: 16,
-
-  }
+  },
 });

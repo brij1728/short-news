@@ -1,15 +1,15 @@
 import * as React from 'react';
+import { Platform } from 'react-native';
 
-import { Home } from '../../screens';
+import { Appbar } from 'react-native-paper';
+
 import { Search } from '../../components';
+import { Home } from '../../screens';
 
 export const Navigation = () => {
-  return(
+  return (
     <>
-     <Search searchKeyword={''} setSearch={function (value: string): void {
-    throw new Error('Function not implemented.');
-  } }/>
-     <Home />
-     </>
-     );
+      <Home />
+    </>
+  );
 };
