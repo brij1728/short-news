@@ -1,8 +1,8 @@
-import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 
 import { Article } from '../../api/types';
 import { NewsCard } from '../cards';
+import React from 'react';
 
 type NewsType = {
   articles: Article[];
@@ -19,7 +19,7 @@ export const NewsItems = ({ articles }: NewsType) => {
             link={article.link}
             id={article._id}
             summary={article.summary}
-            key={article._id}
+          
           />
         );
       })}
@@ -30,5 +30,8 @@ export const NewsItems = ({ articles }: NewsType) => {
 const styles = StyleSheet.create({
   container: {
     height: 50,
+    width: '100%',
+    flex: 1,
+    contentInset: '0 0'
   },
 });

@@ -14,7 +14,7 @@ type CardDetails = {
 
 export const NewsCard = ({ id, summary, media, link }: CardDetails) => {
   return (
-    <View>
+ 
       <Card>
         <Image source={{ uri: media }} style={{ width: '100%', height: 400 }} />
         <Text> {summary}</Text>
@@ -22,6 +22,6 @@ export const NewsCard = ({ id, summary, media, link }: CardDetails) => {
           Click here for source article
         </Text>
       </Card>
-    </View>
+  
   );
 };

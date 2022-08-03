@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import { StyleSheet, View } from 'react-native';
 
 import { SearchBar } from '@rneui/themed';
@@ -13,7 +14,7 @@ export const Search = ({ searchKeyword, setSearch }: ISearchProps) => {
     setSearch(search);
   };
   return (
-    <View>
+    <View style={styles.container}>
       <SearchBar
         placeholder="Type here..."
         value={searchKeyword}
@@ -23,4 +24,19 @@ export const Search = ({ searchKeyword, setSearch }: ISearchProps) => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    height: 50,
+    backgroundColor: 'white',
+    borderRadius: 8,
+    paddingBottom: 16,
+  },
+  searchInput: {
+    width: '100%',
+    height: '100%',
+    paddingLeft: 8,
+    fontSize: 16,
+
+  }
+});
