@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Linking, StyleSheet } from 'react-native';
 
 import { Card, Paragraph, Text, Title } from 'react-native-paper';
+import { Linking, StyleSheet } from 'react-native';
 
 import { Article } from '../../../api/types';
 
@@ -11,7 +11,7 @@ type NewsCardProps = {
 
 export const NewsCard = ({ article }: NewsCardProps) => {
   return (
-    <Card style={styles.newsCard}>
+    <Card style={styles.newsCard} onPress={() => Linking.openURL(article.link)}>
       <Title>{article.title}</Title>
       {article.media && (
         <Card.Cover

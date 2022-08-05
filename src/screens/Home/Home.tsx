@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
 
 import { ActivityIndicator, Appbar } from 'react-native-paper';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 
-import { searchNewsByKeyword } from '../../api/client';
-import { SearchResults } from '../../api/types';
-import { Search } from '../../components';
 import { NewsItems } from '../../components/NewsItems';
+import { Search } from '../../components';
+import { SearchResults } from '../../api/types';
+import { searchNewsByKeyword } from '../../api/client';
 
 const MORE_ICON = Platform.OS === 'ios' ? 'dots-horizontal' : 'dots-vertical';
 

@@ -1,15 +1,17 @@
 import * as React from 'react';
-import { Platform } from 'react-native';
 
-import { Appbar } from 'react-native-paper';
-
-import { Search } from '../../components';
 import { Home } from '../../screens';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 export const Navigation = () => {
   return (
-    <>
-      <Home />
-    </>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
